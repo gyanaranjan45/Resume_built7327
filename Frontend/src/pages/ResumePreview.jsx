@@ -9,7 +9,7 @@ export default function ResumePreview() {
 
   const downloadProtected = async () => {
     const res = await fetch(
-      "http://localhost:5000/api/resume/download-protected",
+      "https://resume-built7327.onrender.com/api/resume/download-protected",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
