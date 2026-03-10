@@ -29,7 +29,7 @@ export default function ResumePreview() {
   };
 
   const emailResume = async () => {
-    await fetch("http://localhost:5000/api/resume/email", {
+    await fetch("https://resume-built7327.onrender.com/api/resume/email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
