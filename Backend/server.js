@@ -14,11 +14,5 @@ app.use("/api/resume", require("./routes/resumeRoutes"));
 app.use("/api/admin", require("./routes/adminRoutes"));
 const cors = require("cors");
 
-app.use(
-  cors({
-    origin: [
-      "http://localhost:5173", // local dev
-      "https://resume-builder-frontend.onrender.com", // deployed frontend
-    ],
-  })
-);
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log("Server running"));
