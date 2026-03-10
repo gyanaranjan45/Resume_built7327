@@ -7,7 +7,8 @@ dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors());
+app.use(cors({origin:"https://resume-built7327-1.onrender.com",
+              credential:true}));
 app.use(express.json());
 app.use("/files", require("express").static("storage"));
 app.use("/api/resume", require("./routes/resumeRoutes"));
